@@ -16,14 +16,13 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>boot_cloud</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <modules>
     <module>boot-ssh</module>
     <module>boot-ssm</module>
     <module>pojo</module>
     <module>boot-eureka-server</module>
+    <module>boot-eureka-order</module>
   </modules>
 
   <properties>
