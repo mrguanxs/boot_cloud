@@ -95,6 +95,19 @@
 		</dependencies>
 	</dependencyManagement>
 
+    <!--解决 maven编译在https://repo.maven.apache.org/maven2仓库找不到springcloud的问题
+        问题原因：仓库换了-->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 	<build>
 		<plugins>
 			<plugin>
