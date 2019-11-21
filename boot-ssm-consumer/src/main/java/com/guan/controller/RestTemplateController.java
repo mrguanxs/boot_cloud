@@ -12,6 +12,10 @@ import org.springframework.web.client.RestTemplate;
  * @author Mr.Guan
  * @since 2019/11/21
  * 使用RestTemplate进行远程调用测试
+ * 缺点：1. ip地址硬编码，不好维护
+ *      2. 服务提供方是否存活未知
+ *      3. 负载均衡需要手动编码，不好实现
+ *      4. 容灾
  */
 @RequestMapping("/rest")
 @RestController
