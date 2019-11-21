@@ -23,6 +23,7 @@
     <module>boot-ssh</module>
     <module>boot-ssm</module>
     <module>pojo</module>
+    <module>boot-eureka-server</module>
   </modules>
 
   <properties>
