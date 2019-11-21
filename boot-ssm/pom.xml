@@ -9,9 +9,9 @@
 	</parent>
 
 	<groupId>com.guan</groupId>
-	<artifactId>boot-ssm-consumer</artifactId>
+	<artifactId>boot-ssm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>boot-ssm-consumer</name>
+	<name>boot-ssm</name>
 	<description>整合Mybatis的服务消费者</description>
 
 

@@ -1,8 +1,6 @@
 server:
   port: 8090
 spring:
-  application:
-    name: boot-ssm-consumer
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=utf-8&useSSL=true
     username: root

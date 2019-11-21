@@ -20,8 +20,8 @@
   <url>http://www.example.com</url>
 
   <modules>
-    <module>boot-ssh-provider</module>
-    <module>boot-ssm-consumer</module>
+    <module>boot-ssh</module>
+    <module>boot-ssm</module>
     <module>pojo</module>
   </modules>
 

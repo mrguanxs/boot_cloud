@@ -9,9 +9,9 @@
 	</parent>
 
 	<groupId>com.guan</groupId>
-	<artifactId>boot-ssh-provider</artifactId>
+	<artifactId>boot-ssh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>boot-ssh-provider</name>
+	<name>boot-ssh</name>
 	<description>整合spring data jpa的服务提供者</description>
 
 
