@@ -2,6 +2,7 @@ package com.guan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -19,6 +20,7 @@ public class BootEurekaUserApplication {
 	 * RestTemplate是Spring对Http的一个封装类，提供rest风格的远程调用
 	 */
 	@Bean
+	@LoadBalanced		//添加ribbon负载均衡组件
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
