@@ -31,7 +31,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order findById(Integer id) {
         Order order = new Order();
-        order.setId(1);
+        order.setId(id);
         return order;
     }
 
