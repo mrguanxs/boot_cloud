@@ -1,0 +1,16 @@
+#配置单节点eureka server,访问 http://localhost:8888/可以看到管理页面
+spring:
+  application:
+    name: eureke-server
+server:
+  port: 9999
+eureka:
+  instance:
+    prefer-ip-address: true
+#    hostname: eureka-server2
+#    instance-id: ${spring.cloud.client.ip-address}
+  client:
+    fetch-registry: true  #默认true，是否需要Eureka获取注册信息,单点eureka server不需要同步其它节点数据
+    register-with-eureka: true #默认true，是否需要把自己注册到Eureka
+    service-url:
+      defaultZone: http://192.168.1.49:8888/eureka/,http://10.211.55.5:9999/eureka/

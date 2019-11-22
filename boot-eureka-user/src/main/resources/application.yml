@@ -8,4 +8,5 @@ eureka:
     prefer-ip-address: true     #优先ip调用
   client:
     service-url:
-      defaultZone: http://localhost:8888/eureka/    #注册中心节点
+#      defaultZone: http://127.0.0.1:8888/eureka/    #注册中心节点
+      defaultZone: http://192.168.1.49:8888/eureka/,http://10.211.55.5:9999/eureka/    #注册中心节点

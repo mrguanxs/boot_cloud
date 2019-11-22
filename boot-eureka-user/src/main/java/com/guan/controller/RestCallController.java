@@ -18,8 +18,8 @@ import java.util.List;
  * User:
  */
 @RestController
-@RequestMapping("/call")
-public class CallController {
+@RequestMapping("/rest/call")
+public class RestCallController {
 
     @Autowired
     private RestTemplate restTemplate;

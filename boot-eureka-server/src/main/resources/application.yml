@@ -1,9 +1,3 @@
-#配置单节点eureka server,访问 http://localhost:8888/可以看到管理页面
-server:
-  port: 8888
-eureka:
-  client:
-    fetch-registry: false  #默认true，是否需要Eureka获取注册信息,单点eureka server不需要同步其它节点数据
-    register-with-eureka: false #默认true，是否需要把自己注册到Eureka
-    service-url:
-      defaultZone: http://localhost:${server.port}/eureka/
+spring:
+  profiles:
+    active: 8888
