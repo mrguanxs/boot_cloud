@@ -1,7 +1,9 @@
 package com.guan;
 
+import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -12,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients		//开启openfeign服务调用
 @EnableEurekaClient		//开启eureka client
 @SpringBootApplication
-//@EnableHystrix			//开启熔断功能
+//@EnableHystrix			//ribbbon方式开启熔断功能
 public class BootEurekaUserApplication {
 
 	public static void main(String[] args) {
@@ -28,5 +30,15 @@ public class BootEurekaUserApplication {
 //	public RestTemplate restTemplate(){
 //		return new RestTemplate();
 //	}
+
+	@Bean
+	public ServletRegistrationBean getServlet(){
+		HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+		ServletRegistrationBean registrationBean = new ServletRegistrationBean(streamServlet);
+		registrationBean.setLoadOnStartup(1);
+		registrationBean.addUrlMappings("/hystrix.stream");		//访问地址，用于监控面板
+		registrationBean.setName("HystrixMetricsStreamServlet");
+		return registrationBean;
+	}
 
 }
