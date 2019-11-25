@@ -14,3 +14,7 @@ eureka:
 #boot-eureka-order:
 #  ribbon:
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#feign开启hystrix熔断器
+feign:
+  hystrix:
+    enabled: true

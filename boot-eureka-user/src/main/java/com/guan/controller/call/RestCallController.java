@@ -1,6 +1,7 @@
 package com.guan.controller.call;
 
 import com.guan.pojo.Order;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -64,6 +65,23 @@ public class RestCallController {
 //
 //        //默认负载均衡算法：轮询
 //        Order order = restTemplate.getForObject("http://boot-eureka-order/order/findById/3", Order.class);
+//        return order;
+//    }
+
+//    @RequestMapping(value = "/order/hystrix", method = RequestMethod.GET)
+//    @HystrixCommand(fallbackMethod = "fallBack")
+//    public Order orderHystrix(){
+//
+//        //默认负载均衡算法：轮询
+//        Order order = restTemplate.getForObject("http://boot-eureka-order/order/findById/3", Order.class);
+//        return order;
+//    }
+//
+//    //注意：返回值类型要跟调用方法一致
+//    public Order fallBack(){
+//        System.out.println("user服务用不了了，熔断进入fallback方法了");
+//        Order order = new Order();
+//        order.setDescription("user服务用不了了，熔断进入fallback方法了");
 //        return order;
 //    }
 

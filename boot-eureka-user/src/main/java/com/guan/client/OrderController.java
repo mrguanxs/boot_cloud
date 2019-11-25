@@ -17,7 +17,8 @@ import java.util.List;
  * 2）检查@RequestMapping注解，路径要补全
  * 3）@PathVariable注解的value不能省略
  */
-@FeignClient("boot-eureka-order")
+//value:提供者名称，fallback：FallBack处理类
+@FeignClient(value = "boot-eureka-order", fallback = OrderControllerFallBack.class)
 public interface OrderController {
 
     @RequestMapping(value = "/order/findAll", method= RequestMethod.GET)
