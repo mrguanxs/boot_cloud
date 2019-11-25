@@ -29,6 +29,7 @@ public class OrderController {
 
     @RequestMapping(value = "/findById/{id}", method=RequestMethod.GET)
     public Order findById(@PathVariable Integer id){
+        System.out.println("=============");
         return orderService.findById(id);
     }
 
