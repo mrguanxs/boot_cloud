@@ -1,0 +1,24 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: boot-zuul
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://192.168.1.49:8888/eureka/,http://10.211.55.5:9999/eureka/
+#zuul的动态路由配置，path和serviceId一致时可不配置
+zuul:
+  routes:
+    boot-eureka-user:
+      path: /eureka-user/**
+      serviceId: boot-eureka-user
+    boot-eureka-order:
+          path: /boot-eureka-order/**
+          serviceId: boot-eureka-order
+#关闭zuul预定义的异常过滤器
+  SendErrorFilter:
+    error:
+      disable: true

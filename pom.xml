@@ -25,6 +25,7 @@
     <module>boot-eureka-order</module>
     <module>boot-eureka-user</module>
     <module>boot-hystrix-monitor</module>
+    <module>boot-zuul</module>
   </modules>
 
   <properties>
