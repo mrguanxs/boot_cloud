@@ -48,7 +48,6 @@ public class MyFilter1 extends ZuulFilter {
     @Override
     public Object run() throws ZuulException {
         System.out.println("这是MyFilter1");
-        int a = 10/0;
         return null;
     }
 }
