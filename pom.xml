@@ -26,6 +26,7 @@
     <module>boot-eureka-user</module>
     <module>boot-hystrix-monitor</module>
     <module>boot-zuul</module>
+    <module>boot-config-server</module>
   </modules>
 
   <properties>

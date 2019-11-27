@@ -8,46 +8,28 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>com.guan</groupId>
-	<artifactId>boot-eureka-order</artifactId>
+	<artifactId>boot-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>boot-eureka-order</name>
-	<description>订单服务</description>
-
+	<name>boot-config-server</name>
+	<description>分布式配置服务端</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-		<!--config客户端依赖-->
+		<!--config服务端依赖-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
+		<!--自动刷新配置依赖-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-bus</artifactId>-->
+		<!--</dependency>-->
 
-		<dependency>
-			<groupId>com.guan</groupId>
-			<artifactId>pojo</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 	</dependencies>
-
 
 	<build>
 		<plugins>

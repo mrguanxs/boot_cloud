@@ -1,0 +1,8 @@
+#配置配置中心
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:12000/  #单机版配置中心地址
+      name: order   #配置文件前缀
+      profile: dev  #配置文件后缀
+      label: master #需要获取的仓库分支名称

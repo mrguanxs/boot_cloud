@@ -1,0 +1,11 @@
+#配置高可用配置中心
+spring:
+  cloud:
+    config:
+      name: order   #配置文件前缀
+      profile: dev  #配置文件后缀
+      label: master #需要获取的仓库分支名称
+      #配置中心高可用
+      discovery:
+        enabled: true
+        service-id: boot-config-server

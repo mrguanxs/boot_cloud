@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: boot-config-server
+  profiles:
+    active: 12002
