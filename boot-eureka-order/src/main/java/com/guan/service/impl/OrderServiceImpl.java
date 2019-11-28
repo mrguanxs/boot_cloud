@@ -1,7 +1,9 @@
 package com.guan.service.impl;
 
+import com.guan.dao.OrderDao;
 import com.guan.pojo.Order;
 import com.guan.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,12 +16,12 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    @Autowired
+    private OrderDao orderDao;
+
     @Override
     public List<Order> findAll() {
-        List<Order> list = new ArrayList<>();
-        Order order = new Order();
-        list.add(order);
-        return list;
+        return orderDao.findAll();
     }
 
 
@@ -30,9 +32,7 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public Order findById(Integer id) {
-        Order order = new Order();
-        order.setId(id);
-        return order;
+        return orderDao.findById(id).get();
     }
 
 }
