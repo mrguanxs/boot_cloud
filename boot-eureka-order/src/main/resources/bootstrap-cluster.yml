@@ -8,9 +8,10 @@ spring:
       discovery:    #配置中心高可用
         enabled: true
         service-id: boot-config-server
-#注意：eureka要在bootstrap中配置，在github上配置不管用
-#原因：服务需要先注册到eureka才能发现注册中心上的config-server才能拉取配置
-eureka:
+  rabbitmq:
+    host: 10.211.55.5
+    port: 5672
+eureka:   #注意：eureka要在bootstrap中配置，在github上配置不管用 原因：服务需要先注册到eureka才能发现注册中心上的config-server才能拉取配置
   instance:
     prefer-ip-address: true     #优先ip调用
   client:

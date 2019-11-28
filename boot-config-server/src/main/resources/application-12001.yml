@@ -13,3 +13,13 @@ spring:
       server:
         git:
           uri: https://github.com/mrguanxs/config_repo.git    #配置文件仓库地址
+  rabbitmq:
+    host: 10.211.55.5
+    port: 5672
+management:   #暴露触发消息总线的地址
+  endpoint:
+    web:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
