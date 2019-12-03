@@ -4,9 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
+<!--    <groupId>org.springframework.boot</groupId>-->
+<!--    <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--    <version>2.2.1.RELEASE</version>-->
+<!--    <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.1.RELEASE</version>
+    <version>2.1.0.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
@@ -27,13 +31,15 @@
     <module>boot-hystrix-monitor</module>
     <module>boot-zuul</module>
     <module>boot-config-server</module>
+    <module>zipkin-server</module>
   </modules>
 
   <properties>
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
-    <spring-cloud.version>Hoxton.RC2</spring-cloud.version>
+    <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
+<!--    <spring-cloud.version>Hoxton.RC2</spring-cloud.version>-->
+    <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
   </properties>
 
   <dependencyManagement>
@@ -64,17 +70,17 @@
     </dependencies>
   </dependencyManagement>
 
-  <!--解决 maven编译在https://repo.maven.apache.org/maven2仓库找不到springcloud的问题
+  <!--解决 maven编译在https://repo.maven.apache.org/maven2仓库找不到springcloud的Hoxton.RC2问题
         问题原因：仓库换了-->
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
+<!--  <repositories>-->
+<!--    <repository>-->
+<!--      <id>spring-milestones</id>-->
+<!--      <name>Spring Milestones</name>-->
+<!--      <url>https://repo.spring.io/milestone</url>-->
+<!--      <snapshots>-->
+<!--        <enabled>false</enabled>-->
+<!--      </snapshots>-->
+<!--    </repository>-->
+<!--  </repositories>-->
 
 </project>
