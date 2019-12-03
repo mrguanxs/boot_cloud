@@ -44,9 +44,14 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!--日志跟踪-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-sleuth</artifactId>-->
+<!--		</dependency>-->
+		<!--zipkin客户端,已包含sleuth-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 
 		<!--spring data jpa-->
